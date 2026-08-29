@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campanha da Pintura — Instituto Hesed Itajubá</title>
+<meta name="description" content="Ajude na construção do Instituto Hesed Itajubá - MG. Doe a partir de R$ 50,00 pelo PIX itajuba@institutohesed.org.br.">
+<meta name="theme-color" content="#6b2d1b">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Campanha da Pintura — Instituto Hesed Itajubá">
+<meta property="og:description" content="Em prol da construção do Mosteiro Nossa Senhora do Carmo, em Itajubá - MG. Ajude com qualquer valor a partir de R$ 50,00.">
+<meta property="og:image" content="assets/mosteiro.png">
+
+<link rel="icon" href="assets/logo-ihs.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<main class="palco" id="palco">
+
+  <!-- ===================== ENVELOPE FECHADO ===================== -->
+  <div class="envelope-area" id="envelopeArea">
+    <button type="button" class="envelope" id="envelope" aria-expanded="false" aria-controls="carta">
+      <span class="sr-only">Abrir o envelope da Campanha da Pintura</span>
+      <span class="env-fundo"></span>
+      <span class="env-carta">
+        <img src="assets/logo-ihs.png" alt="">
+        <span>Campanha<br>da Pintura</span>
+      </span>
+      <span class="env-frente"></span>
+      <span class="env-aba"></span>
+      <img class="env-selo" src="assets/logo-ihs.png" alt="">
+    </button>
+    <p class="dica">Toque no envelope para abrir</p>
+  </div>
+
+  <!-- ===================== CARTA ABERTA ===================== -->
+  <article class="carta" id="carta" hidden>
+
+    <header class="carta-topo">
+      <img class="carta-logo" src="assets/logo-ihs.png" alt="Brasão do Instituto Hesed">
+      <h1 class="titulo">Campanha da Pintura</h1>
+      <p class="subtitulo">Em prol da Construção do Instituto Hesed Itajubá&nbsp;-&nbsp;MG</p>
+      <p class="chamada">Ajude-nos com qualquer valor <b>a partir de R$ 50,00</b>.</p>
+    </header>
+
+    <hr class="divisor">
+
+    <div class="doacao">
+      <div>
+        <p class="rotulo">Se preferir, pode depositar!</p>
+
+        <dl class="dados">
+          <dt>Chave PIX</dt>
+          <dd class="pix-linha">
+            <span class="pix-chave" id="pixChave">itajuba@institutohesed.org.br</span>
+            <button type="button" class="btn btn-contorno" data-copiar="itajuba@institutohesed.org.br">Copiar chave</button>
+          </dd>
+
+          <dt>Banco do Brasil</dt>
+          <dd>C/C: 32459-0 &nbsp;·&nbsp; Ag: 0380-5</dd>
+
+          <dt>CNPJ</dt>
+          <dd>02.779.337/0002-55</dd>
+        </dl>
+      </div>
+
+      <div class="qr-caixa">
+        <img src="assets/qr-pix.png" alt="QR Code para doação via PIX">
+        <p class="qr-legenda">Aponte a câmera do seu banco</p>
+      </div>
+    </div>
+
+    <div class="contato-linha">
+      <p>Envie seu comprovante ou tire dúvidas:</p>
+      <a class="btn btn-zap" href="https://wa.me/5535984524784?text=Ol%C3%A1!%20Gostaria%20de%20contribuir%20com%20a%20Campanha%20da%20Pintura." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1s-.8 1-.9 1.2c-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5 0-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2m0 1.7a8.3 8.3 0 0 1 6.6 13.3 8.3 8.3 0 0 1-10.9 2.3l-.4-.2-3.1.8.8-3-.2-.4A8.3 8.3 0 0 1 12 3.7"/></svg>
+        (35) 98452-4784
+      </a>
+    </div>
+
+    <!-- ===== LINK PARA A HISTÓRIA ===== -->
+    <a class="mosteiro-link" href="historia.html">
+      <img src="assets/mosteiro.png" alt="Mosteiro Nossa Senhora do Carmo em construção, em Itajubá - MG">
+      <span class="mosteiro-selo">
+        <strong>Clique no Mosteiro e conheça a nossa história</strong>
+        <span aria-hidden="true">→</span>
+      </span>
+    </a>
+
+    <p class="rodape-carta">
+      <strong>Mosteiro Nossa Senhora do Carmo</strong><br>
+      Av. José de Souza Nogueira, 505 — Santa Rosa, Itajubá - MG · CEP 37501-554<br>
+      <a href="historia.html">Nossa história, redes e contatos</a>
+    </p>
+
+    <button type="button" class="fechar-envelope" id="fecharEnvelope">↑ Fechar o envelope</button>
+  </article>
+
+</main>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
