@@ -273,6 +273,12 @@ a{ color:var(--marrom); }
   border:1px solid rgba(107,45,27,.10);
 }
 .palco.revelado .carta{ opacity:1; transform:none; }
+/* enquanto a carta ainda esta invisivel ela fica fora do fluxo,
+   senao o envelope "pula" para cima assim que o envelope e clicado */
+.palco:not(.revelado) .carta{
+  position:absolute; left:50%; top:0; transform:translateX(-50%) translateY(34px) scale(.965);
+  pointer-events:none;
+}
 
 .carta-topo{ text-align:center; }
 .carta-logo{ width:64px; margin:0 auto 14px; }
