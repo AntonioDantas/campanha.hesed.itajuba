@@ -637,3 +637,33 @@ h1.titulo{
   .envelope-area,.dica,.fechar-envelope,.voltar,.musica-btn{ display:none !important; }
   .carta{ opacity:1 !important; transform:none !important; box-shadow:none; }
 }
+
+/* ===================== PEDIDO DE ORAÇÃO ===================== */
+.capa-oracao img.capa-foto{ object-fit:contain; object-position:center; opacity:.4; }
+
+.form-oracao{ display:block; max-width:620px; margin:0 auto; }
+.form-oracao label{
+  display:block; margin:18px 0 7px;
+  font-family:var(--sans); font-size:.78rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--tinta-suave);
+}
+.form-oracao label small{ font-weight:600; letter-spacing:.06em; text-transform:none; }
+.form-oracao textarea,
+.form-oracao input[type="text"]{
+  width:100%; box-sizing:border-box;
+  font-family:var(--serif); font-size:1rem; color:var(--tinta);
+  background:#fff; border:0; border-radius:14px; padding:14px 16px;
+  box-shadow:inset 0 0 0 2px rgba(107,45,27,.22);
+}
+.form-oracao textarea{ resize:vertical; line-height:1.6; }
+.form-oracao textarea:focus,
+.form-oracao input[type="text"]:focus{
+  outline:none; box-shadow:inset 0 0 0 2px var(--marrom);
+}
+.form-botoes{ display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+.form-status{
+  margin:16px 0 0; font-size:.9rem; font-weight:600; color:var(--marrom-escuro);
+  min-height:1.2em;
+}
+.link-oracao{ background:linear-gradient(160deg, #f0e2d5, #d9c1ac); }
+.link-oracao img{ object-fit:contain; padding:10px 0; }

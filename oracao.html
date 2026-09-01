@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedido de oração — Instituto Hesed Itajubá</title>
+<meta name="description" content="Envie o seu pedido de oração para as irmãs do Instituto Hesed, em Itajubá - MG.">
+<meta name="theme-color" content="#6b2d1b">
+
+<link rel="canonical" href="https://antoniodantas.github.io/campanha.hesed.itajuba/oracao.html">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Instituto Hesed Itajubá">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://antoniodantas.github.io/campanha.hesed.itajuba/oracao.html">
+<meta property="og:title" content="Pedido de oração — Instituto Hesed Itajubá">
+<meta property="og:description" content="Escreva a sua intenção. As irmãs rezam por você diante do Santíssimo.">
+<meta property="og:image" content="https://antoniodantas.github.io/campanha.hesed.itajuba/assets/capa-historia.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/logo-ihs.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="capa capa-oracao">
+  <img class="capa-foto" src="assets/nsa-carmo.png" alt="Imagem de Nossa Senhora do Carmo com o Menino Jesus">
+  <nav class="voltar"><a href="index.html#carta">← Voltar ao envelope</a></nav>
+  <div class="capa-conteudo">
+    <img class="capa-logo" src="assets/logo-ihs.png" alt="">
+    <h1>Pedido de oração</h1>
+    <p>Escreva a sua intenção. As irmãs rezam por você diante do Santíssimo Sacramento.</p>
+  </div>
+</header>
+
+<main class="conteudo">
+  <form class="form-oracao" id="formOracao" autocomplete="off">
+    <label for="pedido">Seu pedido</label>
+    <textarea id="pedido" name="pedido" rows="4" required
+      placeholder="Escreva aqui a sua intenção..."></textarea>
+
+    <label for="nome">Seu nome <small>(opcional)</small></label>
+    <input type="text" id="nome" name="nome" placeholder="Como podemos chamá-lo?">
+
+    <div class="form-botoes">
+      <button type="button" class="btn btn-marrom" id="enviarSite" hidden>Enviar o pedido</button>
+      <button type="button" class="btn btn-zap" id="enviarZap">Enviar por WhatsApp</button>
+      <button type="button" class="btn btn-contorno" id="enviarEmail">Enviar por e-mail</button>
+    </div>
+
+    <p class="form-status" id="statusEnvio" role="status" aria-live="polite"></p>
+  </form>
+</main>
+
+<footer class="rodape">
+  <strong>Mosteiro Nossa Senhora do Carmo — Instituto Hesed Itajubá</strong><br>
+  Av. José de Souza Nogueira, 505 — Santa Rosa, Itajubá - MG · CEP 37501-554
+</footer>
+
+<div class="aviso" id="aviso" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/oracao.js"></script>
+<script src="js/musica.js"></script>
+</body>
+</html>
