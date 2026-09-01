@@ -33,6 +33,7 @@ html{ scroll-behavior:smooth; }
 body{
   margin:0;
   min-height:100vh;
+  display:flex; flex-direction:column;
   font-family:var(--sans);
   color:var(--tinta);
   background:
@@ -57,6 +58,8 @@ a{ color:var(--marrom); }
 
 .palco{
   position:relative;
+  flex:1 0 auto;
+  min-height:100vh;      /* reserva para navegadores antigos */
   min-height:100svh;
   display:flex; flex-direction:column;
   align-items:center; justify-content:center;
@@ -65,6 +68,7 @@ a{ color:var(--marrom); }
 }
 
 .envelope-area{
+  margin:auto 0;         /* mantem o envelope no centro da tela */
   perspective:1600px;
   display:flex; flex-direction:column; align-items:center; gap:20px;
   transition:opacity 1.4s ease, transform 1.4s ease;
