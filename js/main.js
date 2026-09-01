@@ -69,7 +69,7 @@
     envelope.setAttribute('aria-expanded', 'true');
     carta.hidden = false;
 
-    var espera = imediato ? 0 : 850;   // tempo da aba abrir + carta subir
+    var espera = imediato ? 0 : 5400;  // tempo da aba abrir + carta subir (animacao lenta)
     setTimeout(function () {
       requestAnimationFrame(function () {
         palco.classList.add('revelado');
@@ -86,7 +86,7 @@
     setTimeout(function () {
       if (!aberto) carta.hidden = true;
       envelope.focus();
-    }, 700);
+    }, 1100);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
