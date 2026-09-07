@@ -11,11 +11,13 @@
   --creme:         #fbf5ee;
   --creme-2:       #f3e6d6;
   --papel:         #ffffff;
+  --papel-vidro:   rgba(255,255,255,.82);  /* papel que deixa ver a marca d'agua */
   --tinta:         #3a2a22;
   --tinta-suave:   #6f5a4e;
   --ouro:          #c79a5b;
   --verde-zap:     #1f9d55;
   --borda-env:     #c28a63;   /* contorno do envelope */
+  --marca-agua:    .13;       /* forca da marca d'agua de N. Sra. do Carmo */
 
   --sombra-suave:  0 10px 30px rgba(74, 29, 15, .12);
   --sombra-forte:  0 24px 60px rgba(74, 29, 15, .22);
@@ -42,6 +44,20 @@ body{
     radial-gradient(760px 520px at 96% 88%, rgba(107,45,27,.12) 0%, rgba(107,45,27,0) 60%),
     var(--creme);
   -webkit-font-smoothing:antialiased;
+}
+
+/* marca d'agua: Nossa Senhora do Carmo ao fundo de todo o site.
+   Fica presa a tela (fixed) e sobe do rodape ate o topo, atras de tudo. */
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:-1;
+  pointer-events:none;
+  background-image:url("../assets/nsa-carmo.png");
+  background-repeat:no-repeat;
+  background-position:center bottom;
+  background-size:auto 100%;
+  opacity:var(--marca-agua);
+  filter:saturate(.62) contrast(.94);
 }
 
 img{ max-width:100%; display:block; }
@@ -264,7 +280,7 @@ a{ color:var(--marrom); }
 
 .carta{
   width:min(100%, 860px);
-  background:var(--papel);
+  background:var(--papel-vidro);
   border-radius:var(--raio);
   box-shadow:var(--sombra-forte);
   padding:clamp(22px, 4vw, 44px);
@@ -487,20 +503,6 @@ h1.titulo{
 .galeria figure:hover img{ transform:scale(1.05); }
 .galeria figcaption{ padding:10px 12px; font-size:.78rem; color:var(--tinta-suave); text-align:center; }
 
-/* Nossa Senhora do Carmo, entre os links e o rodape */
-.devocao{
-  background:rgba(107,45,27,.02);
-  padding:10px 22px 34px; text-align:center;
-}
-.devocao img{
-  width:min(210px, 46vw); height:auto; margin:0 auto;
-  filter:drop-shadow(0 10px 22px rgba(74,29,15,.18));
-}
-.devocao p{
-  margin:14px 0 0; font-size:.78rem; letter-spacing:.16em;
-  text-transform:uppercase; font-weight:700; color:var(--marrom-claro);
-}
-
 /* foto da comunidade: ocupa a linha inteira */
 .galeria .destaque{ grid-column:1 / -1; }
 .galeria .destaque img{ height:clamp(240px, 44vw, 430px); object-position:50% 34%; }
@@ -644,12 +646,14 @@ h1.titulo{
 }
 
 @media print{
+  body::before{ display:none !important; }
   .envelope-area,.dica,.fechar-envelope,.voltar,.musica-btn{ display:none !important; }
   .carta{ opacity:1 !important; transform:none !important; box-shadow:none; }
 }
 
 /* ===================== PEDIDO DE ORAÇÃO ===================== */
-.capa-oracao img.capa-foto{ object-fit:contain; object-position:center; opacity:.4; }
+/* a capa nao repete a imagem: quem faz esse papel agora e a marca d'agua */
+.capa-oracao{ min-height:clamp(200px, 30vh, 280px); }
 
 .form-oracao{ display:block; max-width:620px; margin:0 auto; }
 .form-oracao label{
