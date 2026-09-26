@@ -12,7 +12,7 @@ Página simples e estática para divulgar a campanha de arrecadação e facilita
 - **Nossa história** (`historia.html`): a história do Instituto Hesed e da construção do mosteiro.
 - **Pedido de oração** (`oracao.html`): formulário para enviar intenções de oração às irmãs, por WhatsApp ou e-mail.
 
-A pré-visualização ao compartilhar o link no WhatsApp usa a imagem `assets/capa-whatsapp.jpg`.
+A pré-visualização ao compartilhar o link no WhatsApp usa a imagem `assets/capa-whatsapp-v2.jpg`.
 
 ## Trabalho voluntário
 
